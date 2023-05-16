@@ -18,6 +18,7 @@ BACKGROUND:
 In modern operating systems, concurrent programming has become increasingly important due to the widespread use of multi-core processors and the need for efficient resource management. Concurrent programming involves managing shared resources in a way that ensures the correct and efficient use of those resources by multiple threads or processes.
 Synchronization techniques, such as semaphores and mutexes, are commonly used in concurrent programming to manage shared resources. Semaphores are a type of synchronization primitive that can be used to limit access to a shared resource to a certain number of threads or processes at a time.
 The Ice cream factory operating systems project is an example of a concurrent program that uses synchronization techniques to manage shared resources. The program simulates an ice cream factory where multiple ice cream counters manage different ice cream flavors, and customers visit the factory to purchase their desired flavors. The program uses semaphores to manage the availability of ice cream cones for each flavor and ensure that customers can only purchase cones when they are available.
+
 The Ice cream factory program demonstrates the importance of synchronization techniques in concurrent programming and highlights the need for efficient management of shared resources. By using semaphores and threads to manage multiple ice cream counters and customers, the program provides an effective solution for simulating a real-world scenario in a concurrent environment.
 
 PLATFORM AND LANGUAGES:
@@ -32,3 +33,4 @@ In the client process, there are two main threads; one for the ice cream counter
 Each ice cream counter thread will be responsible for managing an ice cream flavor. The first two counters are “cone” and “cream” which the customer will always get (these two threads will always execute). The last three contain extra toppings and the rest counters are for flavors. 
 It is made sure that the flavors are added according to the counter numbers and it is done through using semaphores. All the counters are aligned through semaphores; i.e.: one counter signals the semaphore of the next counter. This way, the threads always execute in a single sequence. 
 Regarding the customer request, we will ask the customer on run-time about how many counters they want to visit. From counters 3-13, the ice cream will get filled accordingly for each customer. 
+

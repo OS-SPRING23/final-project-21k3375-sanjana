@@ -34,3 +34,17 @@ Each ice cream counter thread will be responsible for managing an ice cream flav
 It is made sure that the flavors are added according to the counter numbers and it is done through using semaphores. All the counters are aligned through semaphores; i.e.: one counter signals the semaphore of the next counter. This way, the threads always execute in a single sequence. 
 Regarding the customer request, we will ask the customer on run-time about how many counters they want to visit. From counters 3-13, the ice cream will get filled accordingly for each customer. 
 
+IMPLEMENTATION:
+ The program will be implemented using the C programming language. The program will use POSIX threads and semaphores to manage the synchronization between the threads. The program will run on a Linux operating system.
+The program will use the pthread_create() function to create the required number of ice cream counter threads and customer threads. Each ice cream counter thread will initialize a semaphore for each flavor it manages using the sem_init() function.
+CONCEPTS USED:
+⦁	Inter-Process Communication (Shared –memory)
+⦁	Semaphores
+⦁	Threads using the Pthread library
+⦁	System call using kernel 
+
+SUGGESTED IMPROVEMENTS:
+This project can be altered specifically to make it more user-friendly. We can add more functionalities such as keeping the count of the total allowed customers at each counter and in the ice cream factory. If the number exceeds then the program would use sem_wait(&semaphore) until the place become available. 
+
+CONCLUSION: 
+The Ice cream factory operating systems project demonstrates the use of synchronization techniques to manage shared resources in a concurrent environment. The use of semaphores and threads allows for the efficient management of multiple ice cream counters and customers in the factory. The program can be further improved by implementing additional features, such as a user interface and statistics tracking.

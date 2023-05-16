@@ -37,6 +37,7 @@ Regarding the customer request, we will ask the customer on run-time about how m
 IMPLEMENTATION:
  The program will be implemented using the C programming language. The program will use POSIX threads and semaphores to manage the synchronization between the threads. The program will run on a Linux operating system.
 The program will use the pthread_create() function to create the required number of ice cream counter threads and customer threads. Each ice cream counter thread will initialize a semaphore for each flavor it manages using the sem_init() function.
+
 CONCEPTS USED:
 ⦁	Inter-Process Communication (Shared –memory)
 ⦁	Semaphores
